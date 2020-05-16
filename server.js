@@ -19,12 +19,12 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(flash());
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+app.use(flash());
 
 // middleware for bodyParser;
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -62,7 +62,7 @@ app.get("*", function (req, res) {
 
 // additional user on the mLab db for heroku;
 //  mongodb://<dbuser>:<dbpassword>@ds157493.mlab.com:57493/heroku_f6qg5272
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/chipperdb", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://goatlord:g0atf4c3@ds345597.mlab.com:45597/heroku_4pk5pdn6", {
   useNewUrlParser: true,
 });
 
