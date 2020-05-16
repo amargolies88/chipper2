@@ -20,7 +20,6 @@ router.post("/api/signup", function (req, res) {
     zip: req.body.zip,
   })
     .then(function (result) {
-      console.log("apiRoutes /signup .create(", result, ")");
       res.status(200).json(result);
     })
     .catch(function (err) {
