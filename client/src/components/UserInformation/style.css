@@ -1,0 +1,23 @@
+.userInformation{
+    margin-top:70px;
+    font-family: Sriracha;
+    
+    
+}
+#center-h1{
+    text-align: center;
+    margin-bottom:10px;
+    margin-top:-20px;
+}
+.hr-row{
+        border:2px solid black;
+        border-radius: 25px;
+}
+.user{
+    margin-bottom:10px;
+}
+
+.card-background{
+    background-color:lightgoldenrodyellow; ;
+}
+
