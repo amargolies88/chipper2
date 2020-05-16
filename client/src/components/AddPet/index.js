@@ -9,7 +9,8 @@ function AddPet() {
   const [petMicrochipNumber, setPetMicrochipNumber] = useState("");
   const { fileState } = useContext(AwsUploadContext);
 
-  const onSubmit = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
     axios
       .post("/api/add", {
         petName: petName,
@@ -69,7 +70,7 @@ function AddPet() {
         </div>
         <AwsUploadImage />
         <div>
-        <button type="submit" className="btn btn-warning submit-btn" onClick={onSubmit}>
+          <button type="submit" className="btn btn-warning submit-btn" onClick={onSubmit}>
             Submit
         </button>
         </div>
